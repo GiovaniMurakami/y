@@ -1,8 +1,8 @@
 * {
-font-family: Helvetica, sans-serif;
-margin: 0;
-padding: 0;
-color: #222;
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
 }
 
 body {
@@ -16,36 +16,36 @@ height: 40px;
 }
 
 #navbar {
-padding: 1.2em 2.4em;
-background-color: white;
-border-bottom-left-radius: 15px;
-border-bottom-right-radius: 15px;
-margin: 0 auto 2em;
-width: 65vh;
-display: flex;
-justify-content: space-between;
-align-items: center;
-color: #222;
+    padding: 1.2em 2.4em;
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin: 0 auto 2em;
+    width: 65vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #222;
 }
 
 #navbar ul {
-display: flex;
-list-style: none;
+    display: flex;
+    list-style: none;
 }
 
 #navbar ul li {
-margin-left: 1em;
+    margin-left: 1em;
 }
 
 #navbar ul li a {
-text-decoration: none;
-color: #222;
-transition: 0.5s;
-font-weight: bold;
+    text-decoration: none;
+    color: #222;
+    transition: 0.5s;
+    font-weight: bold;
 }
 
 #navbar ul li a:hover {
-color: #85AACF;
+    color: #85AACF;
 }
 
 /* CONTAINER */
@@ -72,61 +72,61 @@ color: #85AACF;
 
 /* LOGIN E REGISTER */
 .auth-container {
-max-width: 450px;
-margin: 0 auto;
-margin-top: calc(50vh - (70vh / 2));
-display: flex;
-flex-direction: column;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-top: calc(50vh - (80vh / 2));
+    display: flex;
+    flex-direction: column;
 }
 
 .auth-container h2 {
-margin-bottom: 1em;
-color: #222;
-border-left: 4px solid #85AACF;
-padding: 0.3em;
-width: 100px;
+    margin-bottom: 1em;
+    color: #222;
+    border-left: 4px solid #85AACF;
+    padding: 0.3em;
+    width: 100px;
 }
 
 .auth-container a {
-color: #85AACF;
+    color: #85AACF;
 }
 
 .form-control {
-display: flex;
-flex-direction: column;
-margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
 }
 
 .form-control label {
-font-weight: bold;
-margin-bottom: 0.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
 }
 
 .form-control input,
 .form-control textarea {
-padding: 7px;
-border-radius: 3px;
-border: 1px solid #85AACF;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #85AACF;
 }
 
 form input[type='submit'],
 .btn {
-color: #85AACF;
-border: 2px solid #85AACF;
-padding: 0.5em 1.3em;
-margin-bottom: 1em;
-font-size: 1em;
-font-weight: bold;
-border-radius: 5px;
-cursor: pointer;
-text-decoration: none;
-transition: 0.5s;
+    color: #85AACF;
+    border: 2px solid #85AACF;
+    padding: 0.5em 1.3em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.5s;
 }
 
 form input[type='submit']:hover,
 .btn:hover {
-background-color: #85AACF;
-color: #222;
+    background-color: #85AACF;
+    color: #222;
 }
 
 /* CREATE EDIT FORM*/
