@@ -1,0 +1,291 @@
+* {
+font-family: Helvetica, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #fff;
+color: #222;
+}
+
+/* NAVBAR */
+#logo img {
+height: 40px;
+}
+
+#navbar {
+padding: 1.2em 2.4em;
+margin-bottom: 1em;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #fff;
+color: #222;
+border-bottom: 1px solid purple;
+}
+
+#navbar ul {
+display: flex;
+list-style: none;
+}
+
+#navbar ul li {
+margin-left: 1em;
+}
+
+#navbar ul li a {
+text-decoration: none;
+color: #222;
+transition: 0.5s;
+font-weight: bold;
+}
+
+#navbar ul li a:hover {
+color: purple;
+}
+
+/* CONTAINER */
+.container {
+min-height: 60vh;
+padding: 2em;
+}
+
+/* MESSAGES */
+.message{
+    max-width: 450px;
+    padding: 1em;
+    color: #004085;
+    background-color: #cce5ff;
+    border: 1px solid #b8daff;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto 2em;
+}
+
+/* LOGIN E REGISTER */
+.auth-container {
+max-width: 450px;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+}
+
+.auth-container h2 {
+margin-bottom: 1em;
+color: #222;
+border-left: 4px solid purple;
+padding: 0.3em;
+width: 100px;
+}
+
+.auth-container a {
+color: purple;
+}
+
+.form-control {
+display: flex;
+flex-direction: column;
+margin-bottom: 1em;
+}
+
+.form-control label {
+font-weight: bold;
+margin-bottom: 0.5em;
+}
+
+.form-control input,
+.form-control textarea {
+padding: 7px;
+border-radius: 3px;
+border: 1px solid purple;
+}
+
+form input[type='submit'],
+.btn {
+background-color: transparent;
+color: purple;
+border: 2px solid purple;
+padding: 0.5em 1.3em;
+margin-bottom: 1em;
+font-size: 1em;
+font-weight: bold;
+border-radius: 5px;
+cursor: pointer;
+text-decoration: none;
+transition: 0.5s;
+}
+
+form input[type='submit']:hover,
+.btn:hover {
+background-color: purple;
+color: #222;
+}
+
+/* CREATE EDIT FORM*/
+
+.thought-form-container a {
+    color: purple;
+}
+
+.thought-form-container a:hover{
+     color: #fff;
+}
+
+.thought-form-container h1 {
+    margin: 1em 0;
+    color: #222;
+    border-left: 4px solid purple;
+    padding: 0.3em;
+}
+
+.thought-form-container form {
+    max-width: 30%;
+    margin-top: 1.5em;
+}
+
+/*Dashboard*/
+
+.title-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5em;    
+}
+
+.title-container h2 {
+    border: 4px solid purple;
+    padding: 10px;
+}
+
+.title-container h3 {
+    margin-bottom: 1.3em;
+}
+
+.dashboard ul {
+    list-style: none;
+}
+
+.dashboard li {
+    padding: 12px;
+    border-bottom: 1px solid purple;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard .label {
+    font-weight: bold;
+    color: purple;
+    margin-right: 2em;
+}
+
+.dashboard .actions {
+    display: flex;
+}
+
+.dashboard .actions .btn {
+    color: #222;
+    border-color: #222;
+    margin: 0 .5em;
+}
+
+/* HOME */
+
+.home-header{
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.home-header h1 {
+    margin-bottom: 1em;
+}
+
+.home-header h1 span {
+    color: purple;
+}
+
+.home-header p, .home-header form {
+    margin-bottom: 1.2em;
+}
+
+.home-header input{
+    border: none;
+    border-bottom: 1px solid #222;
+    padding: .5em;
+    margin-right: 1em;
+}
+
+.home-header input[type="text"]{
+    width: 60%;
+}
+
+.home-header::placeholder{
+    color: #222;
+}
+
+.order-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto 1em;
+}
+
+.order-container span{
+    font-weight: bold;
+    color: #222;
+}
+
+.order-container form{
+    margin: 0;
+}
+
+.order-container button{
+    margin-bottom: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.order-container button:hover, 
+.order-container a:hover,
+.order-container i:hover{
+    color: purple ;
+}
+
+.order-container button, 
+.order-container a,
+.order-container i{
+    margin: 0 7px ;
+}
+
+.thoughts-container figure {
+    border-bottom: 1px solid #333;
+    padding: .5em;
+    max-width: 50%;
+    margin: 0 auto 1em;
+}
+
+.thoughts-container blockquote {
+    font-style: italic;
+    font-size: 2em;
+    margin-bottom: .4em;
+}
+
+.thoughts-container span {
+    color: purple;
+}
+
+/* FOOTER */
+footer {
+height: 150px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-top: 1px solid purple;
+background-color: #fff;
+}
+
+footer span {
+font-weight: bold;
+color: purple;
+}
