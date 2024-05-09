@@ -265,6 +265,7 @@ color: #222;
 .order-container a,
 .order-container i{
     margin: 0 7px ;
+    background-color: white;
 }
 
 .thoughts-container figure {
