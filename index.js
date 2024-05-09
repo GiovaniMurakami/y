@@ -67,6 +67,10 @@ app.use("/", authRoutes);
 
 app.get("/", ThoughtController.showThoughts);
 
+app.use(function (req, res, next) {
+    res.render("404");
+});
+
 conn.sync()
     .then(() => {
         app.listen(3000);

@@ -165,8 +165,9 @@ form input[type='submit']:hover,
 }
 
 .title-container h2 {
-    border: 4px solid #85AACF;
+    border-left: 4px solid #85AACF;
     padding: 10px;
+    text-align: center;
 }
 
 .title-container h3 {

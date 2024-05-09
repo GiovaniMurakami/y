@@ -60,7 +60,7 @@ module.exports = class ThoughtController {
         };
         try {
             await Thought.create(thought);
-            req.flash("message", "Pensamento criado com sucesso");
+            req.flash("message", "Y criado com sucesso");
             req.session.save(() => {
                 res.redirect("/thoughts/dashboard");
             });
@@ -74,7 +74,7 @@ module.exports = class ThoughtController {
         const UserId = req.session.userid;
         try {
             await Thought.destroy({ where: { id: id, UserId: UserId } });
-            req.flash("message", "Pensamento excluído com sucesso!");
+            req.flash("message", "Y excluído com sucesso!");
             req.session.save(() => {
                 res.redirect("/thoughts/dashboard");
             });
@@ -86,8 +86,9 @@ module.exports = class ThoughtController {
     static async editThought(req, res) {
         const id = req.params.id;
         const thought = await Thought.findOne({ where: { id: id }, raw: true });
-        if (req.session.userid != thought.UserId) {
-            req.flash("message", "Erro, escolha um dado que te pertence");
+
+        if (!thought || req.session.userid != thought.UserId) {
+            req.flash("message", "Erro, não foi possível exibir esse Y");
             ThoughtController.showThoughts(req, res);
             return;
         }
@@ -101,7 +102,7 @@ module.exports = class ThoughtController {
         };
         try {
             await Thought.update(thought, { where: { id: id } });
-            req.flash("message", "Pensamento atualizado com sucesso!");
+            req.flash("message", "Y atualizado com sucesso!");
             req.session.save(() => {
                 res.redirect("/thoughts/dashboard");
             });
