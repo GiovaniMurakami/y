@@ -2,8 +2,12 @@
 font-family: Helvetica, sans-serif;
 margin: 0;
 padding: 0;
-background-color: #fff;
 color: #222;
+}
+
+body {
+    background-color: #4F7AA5;
+    min-height: 100vh;
 }
 
 /* NAVBAR */
@@ -13,13 +17,15 @@ height: 40px;
 
 #navbar {
 padding: 1.2em 2.4em;
-margin-bottom: 1em;
+background-color: white;
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+margin: 0 auto 2em;
+width: 65vh;
 display: flex;
 justify-content: space-between;
 align-items: center;
-background-color: #fff;
 color: #222;
-border-bottom: 1px solid purple;
 }
 
 #navbar ul {
@@ -39,13 +45,17 @@ font-weight: bold;
 }
 
 #navbar ul li a:hover {
-color: purple;
+color: #85AACF;
 }
 
 /* CONTAINER */
 .container {
-min-height: 60vh;
-padding: 2em;
+    min-height: 71.8vh;
+    padding: 2em;
+    background-color: white;
+    width: 75vh;
+    border-radius: 15px;
+    margin: 0 auto;
 }
 
 /* MESSAGES */
@@ -71,13 +81,13 @@ flex-direction: column;
 .auth-container h2 {
 margin-bottom: 1em;
 color: #222;
-border-left: 4px solid purple;
+border-left: 4px solid #85AACF;
 padding: 0.3em;
 width: 100px;
 }
 
 .auth-container a {
-color: purple;
+color: #85AACF;
 }
 
 .form-control {
@@ -95,14 +105,13 @@ margin-bottom: 0.5em;
 .form-control textarea {
 padding: 7px;
 border-radius: 3px;
-border: 1px solid purple;
+border: 1px solid #85AACF;
 }
 
 form input[type='submit'],
 .btn {
-background-color: transparent;
-color: purple;
-border: 2px solid purple;
+color: #85AACF;
+border: 2px solid #85AACF;
 padding: 0.5em 1.3em;
 margin-bottom: 1em;
 font-size: 1em;
@@ -115,24 +124,24 @@ transition: 0.5s;
 
 form input[type='submit']:hover,
 .btn:hover {
-background-color: purple;
+background-color: #85AACF;
 color: #222;
 }
 
 /* CREATE EDIT FORM*/
 
 .thought-form-container a {
-    color: purple;
+    color: #85AACF;
 }
 
 .thought-form-container a:hover{
-     color: #fff;
+     color: #85AACF;
 }
 
 .thought-form-container h1 {
     margin: 1em 0;
     color: #222;
-    border-left: 4px solid purple;
+    border-left: 4px solid #85AACF;
     padding: 0.3em;
 }
 
@@ -150,7 +159,7 @@ color: #222;
 }
 
 .title-container h2 {
-    border: 4px solid purple;
+    border: 4px solid #85AACF;
     padding: 10px;
 }
 
@@ -164,7 +173,7 @@ color: #222;
 
 .dashboard li {
     padding: 12px;
-    border-bottom: 1px solid purple;
+    border-bottom: 1px solid #85AACF;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -172,7 +181,7 @@ color: #222;
 
 .dashboard .label {
     font-weight: bold;
-    color: purple;
+    color: #85AACF;
     margin-right: 2em;
 }
 
@@ -201,7 +210,7 @@ color: #222;
 }
 
 .home-header h1 span {
-    color: purple;
+    color: #85AACF;
 }
 
 .home-header p, .home-header form {
@@ -249,7 +258,7 @@ color: #222;
 .order-container button:hover, 
 .order-container a:hover,
 .order-container i:hover{
-    color: purple ;
+    color: #85AACF ;
 }
 
 .order-container button, 
@@ -272,20 +281,23 @@ color: #222;
 }
 
 .thoughts-container span {
-    color: purple;
+    color: #85AACF;
 }
 
 /* FOOTER */
 footer {
-height: 150px;
-display: flex;
-align-items: center;
-justify-content: center;
-border-top: 1px solid purple;
-background-color: #fff;
+    height: 50px;
+    width: 72vh;
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin: 2em auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer span {
-font-weight: bold;
-color: purple;
+    font-weight: bold;
+    color: #85AACF;
 }
