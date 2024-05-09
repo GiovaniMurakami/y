@@ -21,7 +21,7 @@ height: 40px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     margin: 0 auto 2em;
-    width: 65vh;
+    width: 75vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,10 +48,15 @@ height: 40px;
     color: #85AACF;
 }
 
+#navbar ul li a .bi {
+    font-size: 3.2vh;
+    margin-left: 2vh;
+}
+
 /* CONTAINER */
 .container {
     min-height: 71.8vh;
-    padding: 2em;
+    padding: 2.4em 2.4em;
     background-color: white;
     width: 75vh;
     border-radius: 15px;
@@ -289,7 +294,9 @@ form input[type='submit']:hover,
 /* FOOTER */
 footer {
     height: 50px;
-    width: 72vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
     background-color: white;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
