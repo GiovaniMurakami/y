@@ -10,15 +10,15 @@ const app = express();
 const conn = require("./db/conn");
 
 //Models
-const Thought = require("./models/Thought");
+const Y = require("./models/YText");
 const User = require("./models/User");
 
 //Routes
-const thoughtsRoutes = require("./routes/thoughtsRoutes");
+const YsRoutes = require("./routes/YsRoutes");
 const authRoutes = require("./routes/authRoutes");
 
 //Controllers
-const ThoughtController = require("./controllers/ThoughtsController");
+const YController = require("./controllers/YsController");
 
 //Setting View Engine
 app.engine("handlebars", engine());
@@ -62,10 +62,10 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use("/thoughts", thoughtsRoutes);
+app.use("/Ys", YsRoutes);
 app.use("/", authRoutes);
 
-app.get("/", ThoughtController.showThoughts);
+app.get("/", YController.showYs);
 
 app.use(function (req, res, next) {
     res.render("404");

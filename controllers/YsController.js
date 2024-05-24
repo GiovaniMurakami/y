@@ -1,10 +1,10 @@
-const Thought = require("../models/Thought");
+const YText = require("../models/YText");
 const User = require("../models/User");
 
 const { Op } = require("sequelize");
 
-module.exports = class ThoughtController {
-    static async showThoughts(req, res) {
+module.exports = class YController {
+    static async showYs(req, res) {
         let search = "";
         if (req.query.search) {
             search = req.query.search;
@@ -18,93 +18,93 @@ module.exports = class ThoughtController {
             order = "DESC";
         }
 
-        const thoughtsData = await Thought.findAll({
+        const YData = await YText.findAll({
             include: User,
             where: {
                 title: { [Op.like]: `%${search}%` },
             },
             order: [["createdAt", order]],
         });
-        const thoughts = thoughtsData.map((r) => r.get({ plain: true }));
+        const Ys = YData.map((r) => r.get({ plain: true }));
 
-        let thoughtsQty = thoughts.length;
-        if (thoughtsQty === 0) {
-            thoughtsQty = false;
+        let YsQty = Ys.length;
+        if (YsQty === 0) {
+            YsQty = false;
         }
 
-        res.render("thoughts/home", { thoughts, search, thoughtsQty });
+        res.render("Ys/home", { Ys, search, YsQty });
     }
 
     static async dashboard(req, res) {
         const userId = req.session.userid;
         const user = await User.findOne({
             where: { id: userId },
-            include: Thought,
+            include: YText,
             plain: true,
         });
         if (!user) {
             res.redirect("/login");
         }
-        const thoughts = user.Thoughts.map((r) => r.dataValues);
-        res.render("thoughts/dashboard", { thoughts: thoughts });
+        const Ys = user.YTexts ? user.YTexts.map((r) => r.dataValues) : [];
+        res.render("Ys/dashboard", { Ys });
     }
 
-    static createThought(req, res) {
-        res.render("thoughts/create");
+    static createY(req, res) {
+        res.render("Ys/create");
     }
 
-    static async createThoughtPost(req, res) {
-        const thought = {
+    static async createYPost(req, res) {
+        const Y = {
             title: req.body.title,
             UserId: req.session.userid,
         };
         try {
-            await Thought.create(thought);
+            await YText.create(Y);
             req.flash("message", "Y criado com sucesso");
             req.session.save(() => {
-                res.redirect("/thoughts/dashboard");
+                res.redirect("/Ys/dashboard");
             });
         } catch (e) {
             console.log(e);
         }
     }
 
-    static async removeThought(req, res) {
+    static async removeY(req, res) {
         const id = req.body.id;
         const UserId = req.session.userid;
         try {
-            await Thought.destroy({ where: { id: id, UserId: UserId } });
+            await YText.destroy({ where: { id: id, UserId: UserId } });
             req.flash("message", "Y excluído com sucesso!");
             req.session.save(() => {
-                res.redirect("/thoughts/dashboard");
+                res.redirect("/Ys/dashboard");
             });
         } catch (e) {
             console.log(e);
         }
     }
 
-    static async editThought(req, res) {
+    static async editY(req, res) {
         const id = req.params.id;
-        const thought = await Thought.findOne({ where: { id: id }, raw: true });
+        const Y = await YText.findOne({ where: { id: id }, raw: true });
 
-        if (!thought || req.session.userid != thought.UserId) {
+        if (!Y || req.session.userid != Y.UserId) {
             req.flash("message", "Erro, não foi possível exibir esse Y");
-            ThoughtController.showThoughts(req, res);
+            YController.showYs(req, res);
             return;
         }
-        res.render("thoughts/edit", { thought });
+        res.render("Ys/edit", { Y });
     }
 
-    static async editThoughtSave(req, res) {
+    static async editYSave(req, res) {
         const id = req.body.id;
-        const thought = {
+        const Y = {
             title: req.body.title,
         };
         try {
-            await Thought.update(thought, { where: { id: id } });
+            await YText.update(Y, { where: { id: id } });
             req.flash("message", "Y atualizado com sucesso!");
             req.session.save(() => {
-                res.redirect("/thoughts/dashboard");
+                res.redirect("/Ys/dashboard");
             });
         } catch (e) {
             console.log(e);

@@ -1,16 +1,16 @@
 <div class="dashboard">
     <div class="title-container">
         <h2>Perfil</h2>
-        <a href="/thoughts/add" class="btn">Criar Y</a>
+        <a href="/Ys/add" class="btn">Criar Y</a>
     </div>
     <h3>Seus Y</h3>
     <ul>
-        {{#each thoughts}}
+        {{#each Ys}}
             <li>
                 <span class="label">{{this.title}}</span>
                 <span class="actions">
-                    <a href="/thoughts/edit/{{this.id}}" class="btn">Editar</a>
-                    <form action="/thoughts/remove" method="POST">
+                    <a href="/Ys/edit/{{this.id}}" class="btn">Editar</a>
+                    <form action="/Ys/remove" method="POST">
                         <input type="hidden" name="id" value="{{this.id}}">
                         <input type="submit" value="Excluir" class="btn">
                     </form>
